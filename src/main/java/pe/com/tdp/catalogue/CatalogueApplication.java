@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CatalogueApplication implements CommandLineRunner {
+public class CatalogueApplication {
 
 	private static final Logger logger = LogManager.getLogger();
 
@@ -15,8 +15,4 @@ public class CatalogueApplication implements CommandLineRunner {
 		SpringApplication.run(CatalogueApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		logger.debug("Message");
-	}
 }
