@@ -47,7 +47,7 @@ public class RepositoryData implements ApplicationListener<ApplicationReadyEvent
 
         // DNI
         clientRepository.save(Client.builder().name("Client Uno").typeDocument("DNI").numberDocument("12345678").build());
-        clientRepository.save(Client.builder().name("Client Dos").typeDocument("DNI").numberDocument("12345678").build());
+        clientRepository.save(Client.builder().name("Client Dos").typeDocument("DNI").numberDocument("12345689").build());
 
         // Carnet de extranjeria
         clientRepository.save(Client.builder().name("Client Tres").typeDocument("CE").numberDocument("12345678901").build());

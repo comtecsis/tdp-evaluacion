@@ -36,7 +36,8 @@ public class Mobile {
     @JoinTable(
             name = "mobile_ofert",
             joinColumns = @JoinColumn(name = "ofertFk"),
-            inverseJoinColumns = @JoinColumn(name = "mobileFk"))
+            inverseJoinColumns = @JoinColumn(name = "mobileFk")
+    )
     private List<Ofert> oferts;
 
 }
