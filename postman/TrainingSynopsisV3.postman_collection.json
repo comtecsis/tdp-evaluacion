@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "39c43a86-2edc-41cc-8c30-f0f678bf0a3c",
+		"name": "TrainingSynopsisV3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/v1/login",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client-List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_HOST}}/client",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book-List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_HOST}}/book",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person-List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_HOST}}/person",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client-Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 4,\r\n        \"name\": \"Elvis Perez4\",\r\n        \"email\": \"elvisperez4.tec@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/client",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person-Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/person",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book-Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bitacora 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/book",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Library-Unassing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personId\": 1,\r\n    \"bookId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/library/unassign",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"library",
+						"unassign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIbrary-Assign",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"personId\": 1,\r\n    \"bookId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/library/assign",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"library",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"radius\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/demo/calculation",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"demo",
+						"calculation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByTypeAndNumDoc",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"typeDoc\": \"DNI\",\r\n    \"numDoc\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/demo/findByTypeDocAndNumDoc",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"demo",
+						"findByTypeDocAndNumDoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByDate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beforeDate\": \"2021-09-16 00:00:00.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/demo/findByDate",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"demo",
+						"findByDate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client-Edit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 5,\r\n        \"name\": \"Elvis Perez5_\",\r\n        \"email\": \"elvisperez5_.tec@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/client",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book-Edit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"name\": \"Bitacora 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/book",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person-Edit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"name\": \"Bitacora 3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_HOST}}/person",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_HOST}}/client/4",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"client",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_HOST}}/book/1",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{AUTH_VALUE}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_HOST}}/person/1",
+					"host": [
+						"{{BASE_HOST}}"
+					],
+					"path": [
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_HOST",
+			"value": "http://localhost:9081"
+		},
+		{
+			"key": "AUTH_VALUE",
+			"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ7XCJyb2xlc1wiOlt7XCJhdXRob3JpdHlcIjpcIkFETUlOXCJ9XSxcIm5hbWVcIjpcIkVsdmlzIFBlcmV6XCJ9IiwiZXhwIjoxNjMxNzYxNzc5fQ.XakdxyFmVTNcnXMzji3Mqr3d90_EuugbvXi9GTjRfTdObJrfQzMGuqP9HmnsOI0mWWoZMnjl8NdZvay9EuCeig"
+		}
+	]
+}
