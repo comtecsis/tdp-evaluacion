@@ -4,13 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pe.com.tdp.catalogue.model.Client;
 import pe.com.tdp.catalogue.model.Mobile;
-import pe.com.tdp.catalogue.model.Ofert;
-import pe.com.tdp.catalogue.model.Plan;
 import pe.com.tdp.catalogue.utils.TrainingConstants;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,9 +26,17 @@ public class MobileDTO implements Serializable {
 
     private PlanDTO plan;
 
-    private List<OfertDTO> oferts;
+    private List<OffertDTO> oferts;
 
     public MobileDTO(Mobile mobile) {
-        this(mobile.getId(), mobile.getNumber(), mobile.getState(), mobile.getType(), new PlanDTO(mobile.getPlan()), mobile.getOferts().stream().map(OfertDTO::new).collect(Collectors.toList()));
+        this.id = mobile.getId();
+        this.number = mobile.getNumber();
+        this.state = mobile.getState();
+        this.type = mobile.getType();
+        this.oferts = mobile.getOfferts().stream().map(OffertDTO::new).collect(Collectors.toList());
+        if(mobile.getPlan() != null)
+        {
+            this.plan = new PlanDTO(mobile.getPlan());
+        }
     }
 }

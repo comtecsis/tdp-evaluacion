@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pe.com.tdp.catalogue.enumeration.TrainingStatusEnum;
 import pe.com.tdp.catalogue.request.CalculationRequest;
+import pe.com.tdp.catalogue.request.FindClientByDateRequest;
 import pe.com.tdp.catalogue.request.FindClientByTypeDocAndNumDocRequest;
 import pe.com.tdp.catalogue.response.ClientDTO;
 import pe.com.tdp.catalogue.response.TrainingResponse;
@@ -36,6 +37,12 @@ public class DemoController {
     @PostMapping("/findByTypeDocAndNumDoc")
     public ResponseEntity<?> findClientOne(@RequestBody FindClientByTypeDocAndNumDocRequest bean, HttpServletRequest request) {
         Collection<ClientDTO> result = service.findByTypeDocAndNumDoc(bean);
+        return ResponseEntity.ok().body(new TrainingResponse<Collection<ClientDTO>>(TrainingStatusEnum.OK.getStatus(), result));
+    }
+
+    @PostMapping("/findByDate")
+    public ResponseEntity<?> findByDate(@RequestBody FindClientByDateRequest bean, HttpServletRequest request) {
+        Collection<ClientDTO> result = service.findByDateRequest(bean);
         return ResponseEntity.ok().body(new TrainingResponse<Collection<ClientDTO>>(TrainingStatusEnum.OK.getStatus(), result));
     }
 

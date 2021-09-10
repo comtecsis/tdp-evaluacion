@@ -6,8 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.awt.print.Book;
-import java.sql.Timestamp;
 import java.util.List;
 
 @Entity(name="MOBILE")
@@ -38,6 +36,6 @@ public class Mobile {
             joinColumns = @JoinColumn(name = "ofertFk"),
             inverseJoinColumns = @JoinColumn(name = "mobileFk")
     )
-    private List<Ofert> oferts;
+    private List<Offert> offerts;
 
 }

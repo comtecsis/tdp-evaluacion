@@ -5,10 +5,11 @@ import org.springframework.stereotype.Repository;
 import pe.com.tdp.catalogue.model.Client;
 
 import java.util.Collection;
+import java.util.List;
 
 @Repository
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
-    public Collection<Client> findByTypeDocumentAndNumberDocument(String typeDoc, String numDoc);
+    public List<Client> findByTypeDocumentAndNumberDocument(String typeDoc, String numDoc);
 
 }

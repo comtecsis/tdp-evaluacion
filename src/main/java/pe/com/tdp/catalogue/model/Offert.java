@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Data
 @Builder
-public class Ofert {
+public class Offert {
     @Id
     @GeneratedValue(generator = "ofertGen")
     @Column(name="ofertId")
