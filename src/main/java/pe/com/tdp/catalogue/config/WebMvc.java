@@ -34,8 +34,8 @@ public class WebMvc {
                 "1.0",
                 "http://codmind.com/terms",
                 new Contact("TDP Evaluation", "https://tdp.com/api/evaluation", "apis@tdp.com"),
-                "Not Found",
-                "Not Found",
+                null,
+                null,
                 Collections.emptyList()
         );
     }
