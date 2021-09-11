@@ -33,8 +33,8 @@ public class Mobile {
     @ManyToMany
     @JoinTable(
             name = "mobile_ofert",
-            joinColumns = @JoinColumn(name = "ofertFk"),
-            inverseJoinColumns = @JoinColumn(name = "mobileFk")
+            joinColumns = @JoinColumn(name = "mobileFk"),
+            inverseJoinColumns = @JoinColumn(name = "offertFk")
     )
     private List<Offert> offerts;
 
